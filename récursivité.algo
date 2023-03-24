@@ -1,0 +1,33 @@
+ALGORITHM algorithm_name
+VAR
+  mot:STRING[n]
+  b:BOOLEAN,
+  i,n:INTEGER
+BEGIN
+
+  REPEAT
+    write("veillez introduire un mot")
+    read(mot)
+  UNTIL (mot.length>2)
+
+  b:=TRUE
+  n:=mot.length
+  i:=1
+  IF (n mod 2==0) THEN
+    WHILE ((b==TRUE) et (n<>i+1) )DO
+      IF (mot[i]==mot[n]) THEN
+        b:=TRUE
+      
+      ELSE
+      i:=i+1
+      n:=n-1
+      END_IF
+    END_WHILE
+    
+  END_IF
+IF (b==true) THEN
+  write("le mot est un palindrome")
+ELSE
+  write("ce mot n'est pas un palindrome")
+END_IF
+END
